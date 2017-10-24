@@ -1,8 +1,7 @@
 const express = require('express')
 const { MongoClient } = require('mongodb')
-const url = 'mongodb://localhost/clock'
 const moment = require('moment')
-moment().format()
+const url = 'mongodb://localhost/clock'
 const app = express()
 
 MongoClient.connect(url, (err, db) => {

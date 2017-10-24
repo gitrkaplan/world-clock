@@ -2,10 +2,10 @@
   "name": "world-clock",
   "version": "1.0.0",
   "description": "World clock project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon app.js",
+    "watch": "nodemon",
     "seed": "node seed.js"
   },
   "repository": {
