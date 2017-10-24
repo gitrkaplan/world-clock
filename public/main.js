@@ -19,3 +19,20 @@ const render = time =>
 const timezones = () => {
   return fetch('/clock/times').then(res => res.json())
 }
+
+const tick = () => {
+  const zones = timezones()
+  setInterval(() => {
+    zones
+      .then(times)
+      .then(data => data.map(render))
+      .then(data => {
+        document.querySelector('#times').innerHTML = ''
+        data.forEach(element => {
+          document.querySelector('#times').appendChild(element)
+        })
+      })
+  }, 16)
+}
+
+tick()
